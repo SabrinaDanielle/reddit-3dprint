@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { AppProvider } from "./store";
+import Layout from "./components/Layout";
+import Home from "./components/Home";
+import Post from "./components/Post";
+import SearchResults from "./components/Search/SearchResults";
+import "./App.sass";
+
+const listNames = ["Posts", "New", "Hot", "Top"];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <Layout>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          {listNames.map((listName) => (
+            <Route path={`/${listName}`}>
+              <Home />
+            </Route>
+          ))}
+          <Route path="/post/:id">
+            <Post />
+          </Route>
+          <Route path="/search/:query">
+            <SearchResults />
+          </Route>
+        </Switch>
+      </Layout>
+    </AppProvider>
   );
 }
 

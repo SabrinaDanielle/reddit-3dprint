@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+### Added to CRA
+
+pretty-quick, husky, style-linting,...
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

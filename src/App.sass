@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+
+$blue: hsl(202,66,39);
+$magnolia: #FCF7FF;
+$navbar-padding-vertical: 3rem;
+$navbar-z: 1;
+$footer-color: true;
+
+@at-root
+  @font-face
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: 
+
+
+@at-body  margin: 0
+
+.app-container
+  min-height: 100vh
+  max-width: 2000px
+  width: 100%
+  position: relative
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  align-items: center
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: 'Playfair Display',
+
+.score
+  font-weight: bold;
+
+.search-icon
+  margin-right: -20px;
+
+.post-box:hover
+   background-color: rgb(95,180,156);
+   background-image: linear-gradient(121deg, rgba(95,180,156,1) 52%, rgba(34,116,165,1) 75%, rgba(37,19,81,1) 96%);
+   color: $magnolia;
+   cursor: pointer;
+   text-shadow: whitesmoke;
+.author_post-list
+  font-weight: bold;
+
+.author_post-list:hover
+ color: whitesmoke;
+
+.search
+ margin-bottom: 10%;
+
+ .header
+   margin-bottom: 20%;
+   padding: 10%;
+   .space
+    margin:  3rem;
+
+//  input[placeholder="Search"]
+  //  border: orange;
+
+
+
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import '../node_modules/bulma/sass/components/navbar.sass';
+@import '../node_modules/bulma/sass/layout/footer.sass';
+@import '../node_modules/bulma/sass/layout/section.sass';
+@import '../node_modules/bulma/sass/elements/container.sass';
+@import '../node_modules/bulma/sass/elements/box.sass';
+@import '../node_modules/bulma/sass/components/card.sass';
+@import '../node_modules/bulma/sass/components/tabs.sass';
+@import '../node_modules/bulma/sass/components/panel.sass';
+@import '../node_modules/bulma/sass/elements/title.sass';
+@import '../node_modules/bulma/sass/elements/content.sass';
+@import '../node_modules/bulma/sass/layout/hero.sass';
